@@ -20,5 +20,5 @@ https://github.com/TaguchiModels/dlibModels<br>
 子供から老人までの49人分の写真をカメラで撮影して、その写真の識別を行いました。元データと同じ写真ではあるものの100%の正解でした。
 Pi4Bで5FPS、Pi5で10FPSのスピードでしたので、まずまず実用耐えるのではと考えています。<br>
 <img src="https://github.com/user-attachments/assets/43bf156e-a373-4364-bb0b-c8b3c75f9627" width="500">
-
+  
 <img src="https://github.com/user-attachments/assets/0448c8f3-1af0-45bd-ae7c-10d20c7ac119" width="500">

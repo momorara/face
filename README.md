@@ -21,4 +21,4 @@ https://github.com/TaguchiModels/dlibModels<br>
 Pi4Bで5FPS、Pi5で10FPSのスピードでしたので、まずまず実用耐えるのではと考えています。<br>
 <img src="https://github.com/user-attachments/assets/43bf156e-a373-4364-bb0b-c8b3c75f9627" width="500">
 
-<img src="https://github.com/user-attachments/assets/43bf156e-a373-4364-bb0b-2940841517" width="500">
+<img src="https://github.com/user-attachments/assets/0448c8f3-1af0-45bd-ae7c-10d20c7ac119" width="500">

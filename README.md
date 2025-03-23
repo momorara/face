@@ -21,4 +21,21 @@ https://github.com/TaguchiModels/dlibModels<br>
 Pi4Bで5FPS、Pi5で10FPSのスピードでしたので、まずまず実用耐えるのではと考えています。<br>
 <img src="https://github.com/user-attachments/assets/43bf156e-a373-4364-bb0b-c8b3c75f9627" width="500">
   
-<img src="https://github.com/user-attachments/assets/0448c8f3-1af0-45bd-ae7c-10d20c7ac119" width="500">
+<img src="https://github.com/user-attachments/assets/0448c8f3-1af0-45bd-ae7c-10d20c7ac119" width="500"><br>
+
+<h4><<使用方法>></h4>
+インストールについては、インストール文書に従いインストールを行ってください。<br>
+
+<h4><<動作環境>></h4>
+Pi5、Pi4Bで Bookworm 32bit,64bit(Pi5　64bit推奨) で動作しました。
+
+<h4><<使用説明資料>></h4>
+説明書類の中の資料を確認ください。
+お問い合わせに関しては、購入ページからお願いします。　
+
+<h4><<メンテナンス情報>></h4>
+
+<h4><<サポート窓口>></h4>
+  メールアドレスが　tkj-works@mbr.nifty.com に変更になっています。<br>
+  資料等を修正中ですが、ご注意ください。<br>
+  サポートコミュニティー　https://www.facebook.com/groups/3773038759434230<br>

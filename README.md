@@ -7,5 +7,12 @@
 しかし、Pi5が発売された現在はそこそこ実用的なスピードで処理ができること、昨年日本人による日本人の顔データを含んだデータが公開され日本人に対する精度が向上したことから、日本での実用的な使い方が安価なラズパイで実現できるようになってきました。<br>
 設定にもよりますが、10FPS程度のスピードで識別まで可能です。<br>
 
+<h4><<ライセンスについて >></h4>
+今回以下のリポジトリを参考にしています。
+https://github.com/ageitgey/face_recognition
+https://github.com/davisking/dlib-models
+https://github.com/TaguchiModels/dlibModels/blob/main/README_EN.md
+ライセンスとしてそれぞれのライセンスを掲示しています。
+オリジナル部分もそれぞれに準じます。<br>
 
-<br>
+

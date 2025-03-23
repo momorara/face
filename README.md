@@ -9,10 +9,10 @@
 
 <h4><<ライセンスについて >></h4>
 今回以下のリポジトリを参考にしています。
-https://github.com/ageitgey/face_recognition
-https://github.com/davisking/dlib-models
-https://github.com/TaguchiModels/dlibModels/blob/main/README_EN.md
-ライセンスとしてそれぞれのライセンスを掲示しています。
+https://github.com/ageitgey/face_recognition<br>
+https://github.com/davisking/dlib-models<br>
+https://github.com/TaguchiModels/dlibModels<br>
+ライセンスとしてそれぞれのライセンスを掲示しています。<br>
 オリジナル部分もそれぞれに準じます。<br>
 
 

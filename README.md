@@ -19,5 +19,4 @@ https://github.com/TaguchiModels/dlibModels<br>
 実際の人間の顔をカメラで撮影してデータとできれば良かったのですが、人数を集められないので、フリー素材の写真で代用しています。
 子供から老人までの49人分の写真をカメラで撮影して、その写真の識別を行いました。元データと同じ写真ではあるものの100%の正解でした。
 Pi4Bで5FPS、Pi5で10FPSのスピードでしたので、まずまず実用耐えるのではと考えています。<br>
-![49face](https://github.com/user-attachments/assets/43bf156e-a373-4364-bb0b-c8b3c75f9627)
-<img src="https://github.com/user-attachments/assets/43bf156e-a373-4364-bb0b-c8b3c75f9627" width="300">
+<img src="https://github.com/user-attachments/assets/43bf156e-a373-4364-bb0b-c8b3c75f9627" width="500">

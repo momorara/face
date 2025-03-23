@@ -8,7 +8,7 @@
 設定にもよりますが、10FPS程度のスピードで識別まで可能です。<br>
 
 <h4><<ライセンスについて >></h4>
-今回以下のリポジトリを参考にしています。
+今回以下のリポジトリを参考にしています。<br>
 https://github.com/ageitgey/face_recognition<br>
 https://github.com/davisking/dlib-models<br>
 https://github.com/TaguchiModels/dlibModels<br>

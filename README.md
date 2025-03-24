@@ -24,8 +24,9 @@ Pi4Bで5FPS、Pi5で10FPSのスピードでしたので、まずまず実用耐�
 <img src="https://github.com/user-attachments/assets/0448c8f3-1af0-45bd-ae7c-10d20c7ac119" width="500"><br>
 
 <h4><<使用方法>></h4>
-インストールについては、インストール文書に従いインストールを行ってください。<br>
+購入者にはインストール済みのmicroSDをmicroSDを提供しています。プログラムにアップデートが必要な場合のみインストールしてください。<br>
 git clone https://github.com/momorara/face<br>
+にて、パソコンに一括ダウンロード可能です。<br>
 
 <h4><<動作環境>></h4>
 Pi5、Pi4Bで Bookworm 32bit、64bit(Pi5/64bit推奨) で動作しました。

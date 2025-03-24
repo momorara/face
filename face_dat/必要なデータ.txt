@@ -5,3 +5,8 @@ shape_predictor_68_face_landmarks.dat
 taguchi_face_recognition_resnet_model_v1.dat
 
 ライセンス文書の最後尾に記載してあるリンクからダウンロードしてこのフォルダに配置してください。
+
+
+Shapeはデカくてアップロードできませんでした。
+https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2
+からダウンロードしてください。

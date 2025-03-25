@@ -43,7 +43,15 @@ speed_size = config.speed_size()
 
 # モデルの読み込み
 face_detector = dlib.get_frontal_face_detector()
-face_rec_model_path = "./face_dat/taguchi_face_recognition_resnet_model_v1.dat"
+# 
+model_choice = config.model_choice() 
+# 汎用モデル
+face_rec_model_path = "./face_dat/dlib_face_recognition_resnet_model_v1.dat"
+# 田口モデル
+if model_choice == 1:
+    face_rec_model_path = "./face_dat/taguchi_face_recognition_resnet_model_v1.dat"
+
+
 face_rec_model = dlib.face_recognition_model_v1(face_rec_model_path)
 sp = dlib.shape_predictor("./face_dat/shape_predictor_68_face_landmarks.dat")
 

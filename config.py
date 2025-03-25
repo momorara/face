@@ -53,6 +53,10 @@ tolerance を上げる（例：0.7）と認識されやすいが、誤認識が�
 def tolerance_parameter():
     return 0.6
 
+# 田口モデルを使用する場合は 1
+def model_choice():
+    return 1
+
 """
 # 顔を近づけて写すなら上記ほど大きくなくて良いような気がする。
 # それにスピードが速くなると思う

@@ -12,6 +12,7 @@
 
 print("ウォームアップ中、しばらくお待ちください...")
 # 必要なライブラリをインポート
+import config
 import dlib
 import pickle
 import cv2
@@ -22,7 +23,14 @@ start_Time = time.time()
 
 # 事前学習済みのTaguchiモデルを読み込む
 print("[INFO] Taguchiモデルを読み込んでいます...")
-taguchi_model = dlib.face_recognition_model_v1("./face_dat/taguchi_face_recognition_resnet_model_v1.dat")
+
+# 
+model_choice = config.model_choice() 
+# 汎用モデル
+face_rec_model_path = "./face_dat/dlib_face_recognition_resnet_model_v1.dat"
+# 田口モデル
+if model_choice == 1:
+    face_rec_model_path = "./face_dat/taguchi_face_recognition_resnet_model_v1.dat"
 shape_predictor = dlib.shape_predictor("./face_dat/shape_predictor_68_face_landmarks.dat")
 
 # Dlibの顔検出器
@@ -62,7 +70,7 @@ for (i, imagePath) in enumerate(imagePaths):
     # 最初に見つかった顔の特徴量を取得
     face = faces[0]
     landmarks = shape_predictor(rgb_image, face)
-    encoding = taguchi_model.compute_face_descriptor(rgb_image, landmarks)
+    encoding = facial_model.compute_face_descriptor(rgb_image, landmarks)
 
     # エンコーディング結果を保存
     knownEncodings.append(encoding)

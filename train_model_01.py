@@ -8,6 +8,7 @@
             0.5にしてみたがfaceではスピードは変わらなかった
 2025/03/17  田口モデルように改造 処理が速くなった
 2025/03/18  データ置き場を整理
+2025/03/25  モデルを選択できるようにした
 """
 
 print("ウォームアップ中、しばらくお待ちください...")
@@ -24,6 +25,9 @@ start_Time = time.time()
 # 事前学習済みのTaguchiモデルを読み込む
 print("[INFO] Taguchiモデルを読み込んでいます...")
 
+# Dlibの顔検出器
+face_detector = dlib.get_frontal_face_detector()
+
 # 
 model_choice = config.model_choice() 
 # 汎用モデル
@@ -31,10 +35,10 @@ face_rec_model_path = "./face_dat/dlib_face_recognition_resnet_model_v1.dat"
 # 田口モデル
 if model_choice == 1:
     face_rec_model_path = "./face_dat/taguchi_face_recognition_resnet_model_v1.dat"
+face_rec_model = dlib.face_recognition_model_v1(face_rec_model_path)
+# 顔検出器　特徴量を取得
 shape_predictor = dlib.shape_predictor("./face_dat/shape_predictor_68_face_landmarks.dat")
 
-# Dlibの顔検出器
-detector = dlib.get_frontal_face_detector()
 
 # 画像が保存されているフォルダを指定
 print("[INFO] 顔データの処理を開始します...")
@@ -62,7 +66,7 @@ for (i, imagePath) in enumerate(imagePaths):
     rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # 画像内の顔を検出
-    faces = detector(rgb_image)
+    faces = face_detector(rgb_image)
     if len(faces) == 0:
         print(f"[WARNING] 顔が検出されませんでした: {imagePath}")
         continue
@@ -70,7 +74,7 @@ for (i, imagePath) in enumerate(imagePaths):
     # 最初に見つかった顔の特徴量を取得
     face = faces[0]
     landmarks = shape_predictor(rgb_image, face)
-    encoding = facial_model.compute_face_descriptor(rgb_image, landmarks)
+    encoding = face_rec_model.compute_face_descriptor(rgb_image, landmarks)
 
     # エンコーディング結果を保存
     knownEncodings.append(encoding)
@@ -79,7 +83,7 @@ for (i, imagePath) in enumerate(imagePaths):
 # 顔のエンコーディングデータをファイルに保存
 print("[INFO] エンコーディングデータを保存します...")
 data = {"encodings": knownEncodings, "names": knownNames}
-with open("./face_dat/encodings_taguchi.pickle", "wb") as f:
+with open("./face_dat/encodings.pickle", "wb") as f:
     f.write(pickle.dumps(data))
 
 print("処理が完了しました。")

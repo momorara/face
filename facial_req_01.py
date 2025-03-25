@@ -12,6 +12,7 @@
 2025/03/17  日本人の精度を上げるため田口モデルを適用
 2025/03/18  データ置き場を整理
 2025/03/20  処理軽減のパラメータをconfig化
+2025/03/25  モデルを選択できるようにした
 """
 import config
 # tolerance_parameterの取得 精度調整用
@@ -41,8 +42,9 @@ necessary_count = config.necessary_count()    # 現在使っていない
 # 処理性能軽減のための画像サイズ縮小
 speed_size = config.speed_size()  
 
-# モデルの読み込み
+# Dlibの顔検出器
 face_detector = dlib.get_frontal_face_detector()
+
 # 
 model_choice = config.model_choice() 
 # 汎用モデル
@@ -50,14 +52,14 @@ face_rec_model_path = "./face_dat/dlib_face_recognition_resnet_model_v1.dat"
 # 田口モデル
 if model_choice == 1:
     face_rec_model_path = "./face_dat/taguchi_face_recognition_resnet_model_v1.dat"
-
-
 face_rec_model = dlib.face_recognition_model_v1(face_rec_model_path)
-sp = dlib.shape_predictor("./face_dat/shape_predictor_68_face_landmarks.dat")
+# 顔検出器 特徴量を取得
+shape_predictor = dlib.shape_predictor("./face_dat/shape_predictor_68_face_landmarks.dat")
+
 
 # 初期化
 currentname = "unknown"
-encodingsP = "./face_dat/encodings_taguchi.pickle"
+encodingsP = "./face_dat/encodings.pickle"
 print("[INFO] loading encodings + face detector...")
 
 # pickleの読み込み
@@ -79,11 +81,12 @@ def process_faces(rgb_frame, gray_frame, tolerance, face_size):
         if width < face_size or height < face_size:
             continue
 
-        shape = sp(gray_frame, face)
+        # 顔を検出
+        shape = shape_predictor(gray_frame, face)
         encoding = face_rec_model.compute_face_descriptor(rgb_frame, shape)
         encodings.append(encoding)
 
-        # 顔認識
+        # 顔識別
         distances = []
         for known_encoding in data["encodings"]:
             # Euclidean距離を計算
@@ -144,10 +147,10 @@ if __name__ == "__main__":
             top, right, bottom, left = [int(val * (camera_width_x / proces_width_x)) for val in [top, right, bottom, left]]
             y = top - 15 if top - 15 > 15 else top + 15
 
-            if name != "Unknown":# 名前が判別できた時は緑
+            if name != "Unknown":# 名前が判別できた時は 緑の枠
                 cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 4)
                 cv2.putText(frame, name, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
-            else: # Unknown の場合は赤
+            else: # Unknown の場合は 赤の枠
                 cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 225), 6)
                 cv2.putText(frame, name, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
 
@@ -155,9 +158,16 @@ if __name__ == "__main__":
                 currentname = name
                 print(currentname)
 
-            # ここで、名前を確定した場合の処理を入れることが可能
-            if name == currentname and name != "Unknown":# 連続して同じ名前ならokとプリントする
+
+            """ """ """ """ """ """ """ """ """ """ """ """ 
+            """ ここで、名前を確定した場合の処理を入れることが可能 """
+
+            if name == currentname and name != "Unknown":# 2回 連続して同じ名前ならokとプリントする
                 print("ok")
+
+            """ """ """ """ """ """ """ """ """ """ """ """ 
+            """ """ """ """ """ """ """ """ """ """ """ """ 
+
 
         cv2.imshow("Facial Recognition is Running", frame)
 

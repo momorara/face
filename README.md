@@ -23,6 +23,8 @@ Pi4Bで5FPS、Pi5で10FPSのスピードでしたので、まずまず実用耐�
   
 <img src="https://github.com/user-attachments/assets/0448c8f3-1af0-45bd-ae7c-10d20c7ac119" width="500"><br>
 
+<img src="https://github.com/user-attachments/assets/a9ab521d-1e3d-46dc-916e-40e94d80da74" width="500"><br>
+
 <h4><<使用方法>></h4>
 購入者にはインストール済みのmicroSDをmicroSDを提供しています。プログラムにアップデートが必要な場合のみインストールしてください。<br>
 git clone https://github.com/momorara/face<br>

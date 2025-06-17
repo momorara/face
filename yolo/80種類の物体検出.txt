@@ -1,0 +1,41 @@
+No	クラス名			No	クラス名
+0	person（人）		40	suitcase（スーツケース）
+1	bicycle（自転車）		41	frisbee（フリスビー）
+2	car（車）			42	skis（スキー）
+3	motorcycle（バイク）	43	snowboard（スノボ）
+4	airplane（飛行機）	44	sports ball（ボール）
+5	bus（バス）		45	kite（カイト）
+6	train（電車）		46	baseball bat（バット）
+7	truck（トラック）		47	baseball glove（グローブ）
+8	boat（ボート）		48	skateboard（スケボー）
+9	traffic light（信号）	49	surfboard（サーフボード）
+10	fire hydrant（消火栓）	50	tennis racket（ラケット）
+11	stop sign（停止標識）	51	bottle（ボトル）
+12	parking meter		52	wine glass（ワイングラス）
+13	bench（ベンチ）		53	cup（カップ）
+14	bird（鳥）		54	fork（フォーク）
+15	cat（猫）			55	knife（ナイフ）
+16	dog（犬）			56	spoon（スプーン）
+17	horse（馬）		57	bowl（ボウル）
+18	sheep（羊）		58	banana（バナナ）
+19	cow（牛）			59	apple（りんご）
+20	elephant（象）		60	sandwich（サンドイッチ）
+21	bear（くま）		61	orange（オレンジ）
+22	zebra（しまうま）		62	broccoli（ブロッコリー）
+23	giraffe（きりん）		63	carrot（にんじん）
+24	backpack（リュック）	64	hot dog（ホットドッグ）
+25	umbrella（傘）		65	pizza（ピザ）
+26	handbag（ハンドバッグ）	66	donut（ドーナツ）
+27	tie（ネクタイ）		67	cake（ケーキ）
+28	suitcase		68	chair（椅子）
+29	frisbee			69	couch（ソファ）
+30	skis			70	potted plant（植木鉢）
+31	snowboard		71	bed（ベッド）
+32	sports ball		72	dining table（テーブル）
+33	kite			73	toilet（トイレ）
+34	baseball bat		74	TV
+35	baseball glove		75	laptop（ノートPC）
+36	skateboard		76	mouse（マウス）
+37	surfboard		77	remote（リモコン）
+38	tennis racket		78	keyboard（キーボード）
+39	bottle			79	cell phone（スマホ）

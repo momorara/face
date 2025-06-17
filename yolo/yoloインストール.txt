@@ -1,0 +1,35 @@
+ステップ 1: 仮想環境を作成してPythonを準備
+sudo apt update
+sudo apt install python3-pip python3-venv -y
+python3 -m venv V_yolo --system-site-packages
+source V_yolo/bin/activate
+
+ステップ 2: 依存パッケージをインストール
+pip install --upgrade pip
+pip install ultralytics opencv-python matplotlib
+pip install numpy imutils
+
+ステップ 3: PyTorch を Raspberry Pi 用にインストール
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+
+ステップ 4: YOLO を実行してみる（画像推論）
+仮想環境に入り、ディレクトリyoloに移動後
+静止画については、
+Python photo_yolo.py
+カメラについては、
+Python camera_yolo.py
+を実行してください。
+
+
+
+仮想環境（venv）の削除方法
+rm -rf V_yolo
+
+
+詳細は
+https://github.com/ultralytics/ultralytics/tree/main
+を参照ください。
+ライセンスについては、
+https://github.com/ultralytics/ultralytics/blob/main/LICENSE
+

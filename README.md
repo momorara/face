@@ -34,7 +34,8 @@ git clone https://github.com/momorara/face<br>
 
 
 <h4><<動作環境>></h4>
-Pi5、Pi4Bで Bookworm 32bit、64bit(Pi5/64bit推奨) で動作しました。
+Pi5、Pi4Bで Bookworm 32bit、64bit(Pi5/64bit推奨) で動作しました。<br>
+カメラはパイカメラV1.3を使用しています。<br>
 
 <h4><<使用説明資料>></h4>
 説明書類の中の資料を確認ください。

@@ -15,6 +15,7 @@
 2025/03/30  モデルを選択できるようにした
 2025/03/31  コメント整理   
 2025/04/17  プログラム名を顔識別　face_recognitionとした
+2025/07/25  カメラタイプ対応 *1
 
 face_recognition.py
     01
@@ -34,8 +35,12 @@ import pickle
 import multiprocessing
 from picamera2 import Picamera2
 from scipy.spatial.distance import euclidean  # Euclidean distanceを使用
+# *1
+from libcamera import controls
 
 # 設定の取得
+# カメラタイプの取り込み *1
+camera_type  = config.camera_type()
 # カメラから取り込む画像の大きさの設定
 camera_width_x, camera_width_y = config.camera_width()
 # 処理用の画像の大きさの設定
@@ -64,7 +69,7 @@ shape_predictor = dlib.shape_predictor("./face_dat/shape_predictor_68_face_landm
 
 # 初期化
 currentname = "unknown"
-encodingsP = "./face_dat/encodings.pickle"
+encodingsP = "./face_dat/encodings_taguchi.pickle"
 print("[INFO] loading encodings + face detector...")
 
 # pickleの読み込み
@@ -114,6 +119,11 @@ if __name__ == "__main__":
     picam2 = Picamera2()
     cam_config = picam2.create_preview_configuration(main={"size": (camera_width_x, camera_width_y), "format": "RGB888"})
     picam2.configure(cam_config)
+
+    if camera_type == 3:
+        # オートフォーカスを有効にする *1
+        picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
+        
     picam2.start()
 
     time.sleep(2.0)  # Camera warm-up

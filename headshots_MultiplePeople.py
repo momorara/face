@@ -10,7 +10,7 @@
             一旦終わるにはescキー
             プログラム終了は end exit quit
 2025/03/30  組み合わせテスト 
-
+2025/07/25  カメラタイプ対応 *1
 
 headshots_MultiplePeople_01.py
     パイカメラv1.3を使い複数人分の顔写真を撮影する。
@@ -25,6 +25,11 @@ import os
 import cv2
 from   picamera2 import Picamera2
 import config
+# *1
+from libcamera import controls
+
+# カメラタイプの取り込み *1
+camera_type  = config.camera_type()
 
 def capture_photos(name):
     try:
@@ -39,6 +44,9 @@ def capture_photos(name):
     
     config_settings = picam2.create_preview_configuration(main={"size": (camera_width_x, camera_width_y), "format": "RGB888"})
     picam2.configure(config_settings)
+    if camera_type == 3:
+        # オートフォーカスを有効にする *1
+        picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
     picam2.start()
     
     cv2.namedWindow("スペースを押して写真を保存", cv2.WINDOW_NORMAL)

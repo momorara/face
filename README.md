@@ -42,9 +42,10 @@ Pi5、Pi4Bで Bookworm 32bit、64bit(Pi5/64bit推奨) で動作しました。<b
 お問い合わせに関しては、購入ページからお願いします。　
 
 <h4><<メンテナンス情報>></h4>
-2025/7/3　顔識別システム_取扱説明書を一部修正
-2025/7/7　プログラム名の修正　face_recognition.py　--> facial_recognition.py
-プログラムや説明書にface_recognition.pyというプログラムがあれば、facial_recognition.pyとしてください。
+2025/7/3　顔識別システム_取扱説明書を一部修正<br>
+2025/7/7　プログラム名の修正　face_recognition.py　--> facial_recognition.py<br>
+プログラムや説明書にface_recognition.pyというプログラムがあれば、facial_recognition.pyとしてください。<br>
+2025/07/25 usbカメラを入手したので、usbカメラ用のプログラムをアップしました。でも、パイカメラより遅いですね。<br>
 
 <h4><<サポート窓口>></h4>
   メールアドレスが　tkj-works@mbr.nifty.com に変更になっています。<br>

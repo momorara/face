@@ -31,6 +31,7 @@ git clone https://github.com/momorara/face<br>
 にて、パソコンに一括ダウンロード可能です。<br>
 <br>
 おまけのyoloについては、ライセンスを読んだ上でインストールしてください。<br>
+deepfaceのライセンスはMITです。<br>
 
 
 <h4><<動作環境>></h4>

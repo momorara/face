@@ -30,8 +30,7 @@ import config
 from libcamera import controls
 
 """　感情分析
-pip install transformers torch
-pip install tf-keras
+pip install deepface
 """
 from deepface import DeepFace
 

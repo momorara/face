@@ -19,7 +19,7 @@ headshots_OnePerson.pyを改造して感情分析プログラムにする
             deepfaceのライセンスはMITです。
             https://github.com/serengil/deepface
             age,genderを入れると遅いし、フリーズする
-
+2025/08/01  インストール方法を確認
 """
 import os
 import sys
@@ -31,6 +31,7 @@ from libcamera import controls
 
 """　感情分析
 pip install deepface
+pip install tf-keras
 """
 from deepface import DeepFace
 

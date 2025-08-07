@@ -58,7 +58,7 @@ cv2.namedWindow("スペースを押して写真を保存", cv2.WINDOW_NORMAL)
 cv2.resizeWindow("スペースを押して写真を保存", proces_width_x, proces_width_y)
 
 img_counter = 0
-
+print("スペースキーで実行")
 while True:
     frame = picam2.capture_array()
     # frame = cv2.cvtColor(frame, cv2.COLOR_YUV2BGR)

@@ -21,9 +21,15 @@ from ultralytics import YOLO
 # model = YOLO('yolov8x.pt')    # もっとも大規模なモデル 遅いが精度は良い
 
 # YOLOv11 モデルを読み込み（適宜 yolo11n.pt や yolo11x.pt に変更可）
-model = YOLO('yolo11n.pt')      # もっとも軽量なモデル 速いが精度劣る
+# model = YOLO('yolo11n.pt')      # もっとも軽量なモデル 速いが精度劣る
 # model = YOLO('yolo11.pt')    # ミドルなモデル 少し遅くなるが精度上がる
 # model = YOLO('yolo11x.pt')    # もっとも大規模なモデル 遅いが精度は良い
+
+# YOLOのモデルを読み込み（nanoモデルを推奨）
+model = YOLO("yolo11n.pt")
+# model = YOLO("yolov10n.pt")
+# model = YOLO("yolov9t.pt")
+# model = YOLO("yolov8n.pt")
 
 # 現在のディレクトリにある .jpg ファイルを取得
 image_files = sorted(glob.glob("*.jpg"))

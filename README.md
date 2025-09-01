@@ -55,3 +55,11 @@ Pi5、Pi4Bで Bookworm 32bit、64bit(Pi5/64bit推奨) で動作しました。<b
   メールアドレスが　tkj-works@mbr.nifty.com に変更になっています。<br>
   資料等を修正中ですが、ご注意ください。<br>
   サポートコミュニティー　https://www.facebook.com/groups/3773038759434230<br>
+
+<br>
+-------------------------------------------<br>
+キットの販売について、以下のショップにて扱っています。<br>
+BASEショップ<br>
+https://raspi.thebase.in/<br>
+スイッチサイエンス<br>
+https://www.switch-science.com/search?q=tkj<br>

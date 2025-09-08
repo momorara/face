@@ -16,8 +16,9 @@
 2025/03/31  コメント整理   
 2025/04/17  プログラム名を顔識別　face_recognitionとした
 2025/07/25  カメラタイプ対応 *1
+2025/09/08  取説とプログラム名が違っているので、facial_recognitionとした
 
-face_recognition.py
+facial_recognition.py
     01
 """
 import config

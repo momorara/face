@@ -49,7 +49,6 @@ Pi5、Pi4Bで Bookworm 32bit、64bit(Pi5/64bit推奨) で動作しました。<b
 2025/7/7　プログラム名の修正　face_recognition.py　--> facial_recognition.py<br>
 プログラムや説明書にface_recognition.pyというプログラムがあれば、facial_recognition.pyとしてください。<br>
 2025/07/25 usbカメラを入手したので、usbカメラ用のプログラムをアップしました。<br>
-2025/07/31　deepfaceを使った感情分析プログラムを追加　emo_camera.py<br>
 
 <h4><<サポート窓口>></h4>
   メールアドレスが　tkj-works@mbr.nifty.com に変更になっています。<br>
@@ -58,7 +57,7 @@ Pi5、Pi4Bで Bookworm 32bit、64bit(Pi5/64bit推奨) で動作しました。<b
 
 <br>
 -------------------------------------------<br>
-キットの販売について、以下のショップにて扱っています。<br>
+その他拡張基板等のの販売について、以下のショップにて扱っています。<br>
 BASEショップ<br>
 https://raspi.thebase.in/<br>
 スイッチサイエンス<br>

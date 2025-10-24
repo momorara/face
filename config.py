@@ -41,7 +41,7 @@ def disp_width():
 
 # 検出する顔の最小大きさ デフォルト 50
 def face_size():
-    return 200
+    return 100
     # camera_widthに対しての大きさ
     # 小さいと離れた人の顔も認識してしまうので、近くの人だけ認識させる
 

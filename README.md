@@ -30,8 +30,6 @@ Pi4Bで5FPS、Pi5で10FPSのスピードでしたので、まずまず実用耐�
 git clone https://github.com/momorara/face<br>
 にて、パソコンに一括ダウンロード可能です。<br>
 <br>
-おまけのyoloについては、ライセンスを読んだ上でインストールしてください。<br>
-
 
 <h4><<動作環境>></h4>
 Pi5、Pi4Bで Bookworm 32bit、64bit(Pi5/64bit推奨) で動作しました。<br>

@@ -3,6 +3,8 @@
 
 """
 2025/07/25  usbカメラ仕様に変更した
+Copyright (c) 2026 takanobu Kawabata
+All rights reserved.
 """
 
 import config

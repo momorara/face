@@ -6,6 +6,9 @@
 2025/03/25  モデルを選択できるようにした
 2025/03/30  組み合わせテスト 
 2025/07/25  カメラ仕様に合わせて対応
+
+Copyright (c) 2026 takanobu Kawabata
+All rights reserved.
 """
 
 # デフォルトはパイカメラv1.3 : 1
@@ -41,7 +44,7 @@ def disp_width():
 
 # 検出する顔の最小大きさ デフォルト 50
 def face_size():
-    return 100
+    return 200
     # camera_widthに対しての大きさ
     # 小さいと離れた人の顔も認識してしまうので、近くの人だけ認識させる
 

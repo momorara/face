@@ -16,10 +16,12 @@
 2025/03/31  コメント整理   
 2025/04/17  プログラム名を顔識別　face_recognitionとした
 2025/07/25  カメラタイプ対応 *1
-2025/09/08  取説とプログラム名が違っているので、facial_recognitionとした
 
-facial_recognition.py
+face_recognition.py
     01
+
+Copyright (c) 2026 takanobu Kawabata
+All rights reserved.
 """
 import config
 # tolerance_parameterの取得 精度調整用
@@ -70,8 +72,7 @@ shape_predictor = dlib.shape_predictor("./face_dat/shape_predictor_68_face_landm
 
 # 初期化
 currentname = "unknown"
-# encodingsP = "./face_dat/encodings_taguchi.pickle"
-encodingsP = "./face_dat/encodings.pickle"
+encodingsP = "./face_dat/encodings_taguchi.pickle"
 print("[INFO] loading encodings + face detector...")
 
 # pickleの読み込み

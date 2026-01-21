@@ -10,6 +10,9 @@
 2025/03/18  データ置き場を整理
 2025/03/30  モデルを選択できるようにした
 2025/03/31  テスト
+
+Copyright (c) 2026 takanobu Kawabata
+All rights reserved.
 """
 
 print("ウォームアップ中、しばらくお待ちください...")

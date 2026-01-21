@@ -13,6 +13,9 @@ headshots_OnePerson_01.py
     プログラムを起動すると名前を聞いてくるので、入力すると撮影モードになる(名前は半角英数字のみ)
     スペースキーでシャッターを切る
     ESCかqキーが押されたらプログラム終了
+
+Copyright (c) 2026 takanobu Kawabata
+All rights reserved.
 """
 import os
 import sys

@@ -19,6 +19,9 @@ headshots_MultiplePeople_01.py
     ESCキーが押されたら一人分の撮影を終え、名前を聞いてくる。
     名前を入力すると撮影モードに入る。
     名前入力時に end exit quit を入力するとプログラム終了。
+
+Copyright (c) 2026 takanobu Kawabata
+All rights reserved.
 """
 
 import os

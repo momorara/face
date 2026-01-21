@@ -1,3 +1,8 @@
+"""
+Copyright (c) 2026 takanobu Kawabata
+All rights reserved.
+"""
+
 import os
 import glob
 from PIL import Image

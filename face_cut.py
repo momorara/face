@@ -1,3 +1,14 @@
+"""
+2025/03/31  テスト
+
+headshotsで撮影された写真に対して
+顔を判別して、顔部分を切り出す。
+エラーが出た場合は、顔が写っていないと判定されたので、撮り直しをすること
+
+Copyright (c) 2026 takanobu Kawabata
+All rights reserved.
+"""
+
 import os
 import cv2
 import dlib
@@ -22,14 +33,14 @@ def extract_faces(dataset_dir="dataset", result_dir="result"):
                 if "/._" in img_path:  # 隠しファイルをスキップ
                     continue
                 if img is None:
-                    print("顔が見つかりまん",img_path)
+                    print("顔が見つかりません",img_path)
                     continue
                 
                 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
                 faces = detector(gray)
                 # print(faces)
                 if len(faces) == 0 :
-                    print("顔が見つかりまん",img_path)
+                    print("顔が見つかりません",img_path)
                     continue
                 for i, face in enumerate(faces):
                     x, y, w, h = face.left(), face.top(), face.width(), face.height()

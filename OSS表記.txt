@@ -1,0 +1,23 @@
+This product uses the following open-source software:
+
+- dlib (Boost Software License)
+- OpenCV (Apache License 2.0)
+- imutils (MIT License)
+- SciPy (BSD License)
+- Pillow (HPND License)
+- picamera2
+- libcamera
+
+Each software is licensed under its respective license.
+
+本製品は以下のオープンソースソフトウェアを使用しています。
+
+・dlib（Boost Software License）
+・OpenCV（Apache License 2.0）
+・imutils（MIT License）
+・SciPy（BSD License）
+・Pillow（HPND License）
+・picamera2
+・libcamera
+
+各ソフトウェアの著作権は、それぞれの権利者に帰属します。

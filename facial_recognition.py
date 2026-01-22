@@ -72,7 +72,7 @@ shape_predictor = dlib.shape_predictor("./face_dat/shape_predictor_68_face_landm
 
 # 初期化
 currentname = "unknown"
-encodingsP = "./face_dat/encodings_taguchi.pickle"
+encodingsP = "./face_dat/encodings.pickle"
 print("[INFO] loading encodings + face detector...")
 
 # pickleの読み込み

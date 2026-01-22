@@ -11,6 +11,8 @@
             プログラム終了は end exit quit
 2025/03/30  組み合わせテスト 
 2025/07/25  カメラタイプ対応 *1
+2025/12/27  デフォルトv3対応 エラーでv1.3になる
+2026/01/18  名前の文字列の先頭にある空白を削除する
 
 headshots_MultiplePeople_01.py
     パイカメラv1.3を使い複数人分の顔写真を撮影する。
@@ -19,9 +21,6 @@ headshots_MultiplePeople_01.py
     ESCキーが押されたら一人分の撮影を終え、名前を聞いてくる。
     名前を入力すると撮影モードに入る。
     名前入力時に end exit quit を入力するとプログラム終了。
-
-Copyright (c) 2026 takanobu Kawabata
-All rights reserved.
 """
 
 import os
@@ -49,7 +48,10 @@ def capture_photos(name):
     picam2.configure(config_settings)
     if camera_type == 3:
         # オートフォーカスを有効にする *1
-        picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
+        try:
+            picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
+        except:
+            pass
     picam2.start()
     
     cv2.namedWindow("スペースを押して写真を保存", cv2.WINDOW_NORMAL)
@@ -75,6 +77,7 @@ def capture_photos(name):
 
 while True:
     name = input("あなたの名前をローマ字で登録してください (終了するには 'end' と入力): ")
+    name = name.lstrip()
     if name.lower() == "end" or name.lower() == "exit" or name.lower() == "quit":
         print("プログラムを終了します。")
         break

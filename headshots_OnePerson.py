@@ -7,15 +7,14 @@
 2025/03/11  画像サイズをconfigで設定
 2025/03/30  組み合わせテスト 
 2025/07/25  カメラタイプ対応 *1
+2025/12/27  デフォルトv3対応 エラーでv1.3になる
+2026/01/18  名前の文字列の先頭にある空白を削除する
 
 headshots_OnePerson_01.py
     パイカメラv1.3を使い一人分の顔写真を撮影する。
     プログラムを起動すると名前を聞いてくるので、入力すると撮影モードになる(名前は半角英数字のみ)
     スペースキーでシャッターを切る
     ESCかqキーが押されたらプログラム終了
-
-Copyright (c) 2026 takanobu Kawabata
-All rights reserved.
 """
 import os
 import sys
@@ -26,6 +25,7 @@ import config
 from libcamera import controls
 
 name = input("あなたの名前をローマ字で登録してください: ")
+name = name.lstrip()
 try:
     userDirPath = "dataset/" + name
     os.mkdir(userDirPath)
@@ -48,7 +48,10 @@ config = picam2.create_preview_configuration(main={"size": (camera_width_x, came
 picam2.configure(config)
 if camera_type == 3:
     # オートフォーカスを有効にする *1
-    picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
+    try:
+        picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
+    except:
+        pass
 picam2.start()
 
 cv2.namedWindow("スペースを押して写真を保存", cv2.WINDOW_NORMAL)

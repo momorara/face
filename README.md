@@ -13,7 +13,7 @@ https://github.com/ageitgey/face_recognition<br>
 https://github.com/davisking/dlib-models<br>
 https://github.com/TaguchiModels/dlibModels<br>
 ライセンスとしてそれぞれのライセンスを掲示しています。<br>
-オリジナル部分もそれぞれに準じます。<br>
+オリジナル部分はMIT Licenseです。<br>
 
 <h4><<テストデータ>></h4>
 実際の人間の顔をカメラで撮影してデータとできれば良かったのですが、人数を集められないので、フリー素材の写真で代用しています。
